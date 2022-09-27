@@ -52,6 +52,7 @@ public class UserDAO {
 			entityTransaction.begin();
 			entityManager.remove(user);
 			entityTransaction.commit();
+			System.out.println("deleted");
 			return true;
 		}
 		else {
@@ -65,7 +66,8 @@ public class UserDAO {
 		EntityManager entityManager =entityManagerFactory.createEntityManager();
 
 		EntityTransaction entityTransaction=entityManager.getTransaction();
-		if(user!=null) {
+		User user1 = entityManager.find(User.class,user.getId());
+		if(user1!=null) {
 			entityTransaction.begin();
 
 			entityManager.merge(user);

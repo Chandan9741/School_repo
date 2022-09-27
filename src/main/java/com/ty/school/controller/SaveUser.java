@@ -7,10 +7,10 @@ public class SaveUser {
 
 	public static void main(String[] args) {
 		User user=new User();
-		user.setId(1);
-		user.setEmail("chandu@gmail.com");
-		user.setPassword("fvdcs");
-		user.setPhone(45415);
+		
+		user.setEmail("chethu@gmail.com");
+		user.setPassword("fdcs");
+		user.setPhone(4515);
 		user.setGender("male");
 
 		UserDAO userDAO=new UserDAO();
